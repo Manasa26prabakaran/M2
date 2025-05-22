@@ -13,17 +13,25 @@ Write a C program to print even numbers ranging from M to N (including M and N v
 
 ## PROGRAM:
 ```
-#include<stdio.h>
-int main()
-{
-  int i,n;
-  scanf("%d",&n);
-  for(i=n;i>=1;i--)
-  {
-    if(i%2==0)printf("%d ",i);
-  }
+#include <stdio.h>
+
+int main() {
+    int M, N;
+    printf("Enter the value of M: ");
+    scanf("%d", &M);
+
+    printf("Enter the value of N: ");
+    scanf("%d", &N);
+    printf("Even numbers from %d to %d are:\n", M, N);
+    for (int i = M; i <= N; i++) {
+        if (i % 2 == 0) {
+            printf("%d ", i);
+        }
+    }
+
     return 0;
 }
+
 ```
 
 ## OUTPUT:
@@ -31,7 +39,8 @@ int main()
 
 
 
-![image](https://github.com/user-attachments/assets/a3b88e25-d514-4f76-9956-fd0414df52e5)
+![image](https://github.com/user-attachments/assets/02a5e5a5-5795-4153-b233-ef449c82ecb0)
+
 
 
 
@@ -104,34 +113,35 @@ Write a C program to perform addition and subtraction of two numbers using funct
 
 ## PROGRAM:
 ```
-#include<stdio.h>
-int add()
-{
-    int a,b;
-    scanf("%d%d",&a,&b);
-    return a+b;
+#include <stdio.h>
+
+void add(int a, int b) {
+    int result = a + b;
+    printf("Addition of %d and %d is: %d\n", a, b, result);
 }
-int sub()
-{
-    int a,b;
-    scanf("%d%d",&a,&b);
-    return a-b;
+
+void subtract(int a, int b) {
+    int result = a - b;
+    printf("Subtraction of %d and %d is: %d\n", a, b, result);
 }
-int main()
-{
-    int sum,diff;
-    sum=add();
-    printf("Addition: %d\n",sum);
-    diff=sub();
-    printf("Subtraction: %d\n",diff);
+
+int main() {
+    int num1, num2;
+    printf("Enter two numbers:\n");
+    scanf("%d %d", &num1, &num2);
+    add(num1, num2);
+    subtract(num1, num2);
+
     return 0;
 }
+
 ```
 
 ## OUTPUT:
 
 
-![image](https://github.com/user-attachments/assets/3bc4354b-174f-4305-83db-d0e681562a56)
+
+![image](https://github.com/user-attachments/assets/d0770a31-8a81-4a2c-81b1-8f6996742438)
 
 
 
